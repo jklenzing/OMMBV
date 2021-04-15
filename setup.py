@@ -1,8 +1,7 @@
-import setuptools
-import numpy.distutils.core
 import os
 
 from numpy.distutils.core import Extension
+from numpy.distutils.core import setup
 
 # create extension for calling IGRF
 extensions = [Extension(name='OMMBV.igrf',
@@ -16,7 +15,7 @@ with open(os.path.join(here, version_filename)) as version_file:
     version = version_file.read().strip()
 
 # call setup
-numpy.distutils.core.setup(
+setup(
     name='OMMBV',
     version=version,
     packages=['OMMBV', 'OMMBV.tests'],
