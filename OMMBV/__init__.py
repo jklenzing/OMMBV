@@ -8,12 +8,12 @@ del here
 on_rtd = os.environ.get('ONREADTHEDOCS') == 'True'
 
 if not on_rtd:
-    from . import igrf
+    from OMMBV import igrf
 else:
     igrf = None
-    
-from . import _core
-from ._core import *
-from . import satellite
+
+from OMMBV import _core
+from OMMBV._core import *
+from OMMBV import satellite
 
 __all__ = []
